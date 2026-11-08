@@ -1,0 +1,50 @@
+services:
+  db:
+    image: mysql:8.4
+    command: ["--default-time-zone=+00:00"]
+    environment:
+      MYSQL_DATABASE: ${DB_NAME:-material_studio}
+      MYSQL_USER: ${DB_USER:-material_app}
+      MYSQL_PASSWORD: ${DB_PASSWORD:-local_demo_password}
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-local_root_password}
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./db/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u root -p\"$$MYSQL_ROOT_PASSWORD\" --silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+
+  backend:
+    build: ./backend
+    environment:
+      DB_URL: jdbc:mysql://db:3306/${DB_NAME:-material_studio}?useUnicode=true&characterEncoding=utf8&connectionTimeZone=UTC
+      DB_USER: ${DB_USER:-material_app}
+      DB_PASSWORD: ${DB_PASSWORD:-local_demo_password}
+      STORAGE_ROOT: /data
+      SIM_DEFAULT_FAIL_STAGE: ${SIM_DEFAULT_FAIL_STAGE:-NONE}
+      SIM_DEFAULT_STEP_DELAY_MS: ${SIM_DEFAULT_STEP_DELAY_MS:-1500}
+      SIM_ALLOW_REQUEST_OVERRIDE: ${SIM_ALLOW_REQUEST_OVERRIDE:-true}
+    volumes:
+      - app_files:/data
+    ports:
+      - "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  frontend:
+    build: ./frontend
+    environment:
+      JAVA_API_BASE_URL: http://backend:8080
+    ports:
+      - "3000:3000"
+    depends_on:
+      backend:
+        condition: service_started
+
+volumes:
+  mysql_data:
+  app_files:

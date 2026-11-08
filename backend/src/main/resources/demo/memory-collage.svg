@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1200" role="img" aria-labelledby="title">
+  <title id="title">回忆拼贴示例封面</title>
+  <rect width="960" height="1200" fill="#30343f"/>
+  <rect x="74" y="92" width="810" height="1016" rx="32" fill="#f7efe2"/>
+  <rect x="110" y="128" width="335" height="590" rx="12" fill="#bc8f81"/>
+  <rect x="515" y="128" width="335" height="590" rx="12" fill="#9bb9b4"/>
+  <circle cx="273" cy="302" r="92" fill="#ecd2a4"/>
+  <path d="M110 600 Q245 380 445 585 V718 H110Z" fill="#665f6b"/>
+  <path d="M515 600 Q670 410 850 560 V718 H515Z" fill="#496c69"/>
+  <path d="M607 287 L650 236 L695 287 L747 220" fill="none" stroke="#f7e8cb" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="480" y="865" text-anchor="middle" fill="#343e48" font-family="Arial,sans-serif" font-size="62" font-weight="700">OUR MOMENTS</text>
+  <text x="480" y="923" text-anchor="middle" fill="#777b7a" font-family="Arial,sans-serif" font-size="29">Two photos, one story</text>
+</svg>

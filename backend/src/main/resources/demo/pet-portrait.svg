@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1200" role="img" aria-labelledby="title">
+  <title id="title">宠物画像示例封面</title>
+  <rect width="960" height="1200" fill="#283847"/>
+  <rect x="60" y="60" width="840" height="1080" rx="40" fill="#d7b6a0"/>
+  <circle cx="480" cy="532" r="300" fill="#f4dfca"/>
+  <path d="M276 353 Q210 182 310 183 Q410 210 430 378Z" fill="#aa694f"/>
+  <path d="M684 353 Q750 182 650 183 Q550 210 530 378Z" fill="#aa694f"/>
+  <ellipse cx="480" cy="578" rx="225" ry="238" fill="#e8b78f"/>
+  <ellipse cx="402" cy="546" rx="22" ry="31" fill="#25313a"/>
+  <ellipse cx="558" cy="546" rx="22" ry="31" fill="#25313a"/>
+  <path d="M455 652 Q480 680 505 652 Q480 632 455 652Z" fill="#654b47"/>
+  <path d="M480 678 Q447 720 405 692 M480 678 Q513 720 555 692" fill="none" stroke="#654b47" stroke-width="13" stroke-linecap="round"/>
+  <text x="480" y="998" text-anchor="middle" fill="#263a45" font-family="Arial,sans-serif" font-size="64" font-weight="700">LITTLE FRIEND</text>
+</svg>

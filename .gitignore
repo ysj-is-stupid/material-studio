@@ -1,0 +1,13 @@
+frontend/node_modules/
+frontend/.next/
+frontend/*.tsbuildinfo
+backend/target/
+.env
+*.log
+demo-cookies.txt
+.tmp_*/
+.tmp_*.log
+.DS_Store
+.idea/
+.vscode/
+tmp_docx_review/

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 1200" role="img" aria-labelledby="title">
+  <title id="title">旅行明信片示例封面</title>
+  <defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#27445f"/><stop offset="1" stop-color="#dcbf91"/></linearGradient></defs>
+  <rect width="960" height="1200" fill="#efe5d4"/>
+  <rect x="54" y="54" width="852" height="1092" rx="30" fill="#f9f3e9"/>
+  <rect x="90" y="90" width="780" height="780" rx="16" fill="url(#sky)"/>
+  <path d="M90 675 Q260 510 425 670 T870 610 V870 H90Z" fill="#384d47"/>
+  <path d="M90 760 Q320 630 535 755 T870 730 V870 H90Z" fill="#8fa084"/>
+  <circle cx="710" cy="250" r="94" fill="#f4d795"/>
+  <text x="100" y="990" fill="#344551" font-family="Arial,sans-serif" font-size="56" font-weight="700">TRAVEL NOTES</text>
+  <text x="103" y="1055" fill="#7d817b" font-family="Arial,sans-serif" font-size="30">A postcard from your journey</text>
+</svg>
