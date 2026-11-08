@@ -66,4 +66,8 @@ Docker Desktop 后来恢复运行，`docker version` 能同时返回客户端和
 
 ## 用户最终手工验收反馈（2026 年 11 月 8 日）
 
-用户按最终手工验收清单检查后反馈“都没问题”。清单涵盖启动与模板、上传与校验、正常制作及刷新恢复、指定阶段失败与耗时、多任务、查询断网、A/B 身份隔离、小屏布局和键盘操作。此处记录的是用户反馈；各项自动化、接口及独立浏览器检查的证据见上文。GitHub 私有仓库已创建，远端 Actions 结果以推送后的运行记录为准。
+用户按最终手工验收清单检查后反馈“都没问题”。清单涵盖启动与模板、上传与校验、正常制作及刷新恢复、指定阶段失败与耗时、多任务、查询断网、A/B 身份隔离、小屏布局和键盘操作。此处记录的是用户反馈；各项自动化、接口及独立浏览器检查的证据见上文。GitHub 私有仓库与远端 Actions 结果见下一节。
+
+## GitHub 仓库与远端 CI 补验（2026 年 11 月 8 日）
+
+项目已提交到私有仓库 `https://github.com/ysj-is-stupid/material-studio` 的 `main` 分支。首次源码提交为 `fd70898a0c9255a0693cb178f64e8b5b6ebe4a4f`，对应 GitHub Actions 运行 `42481306208`。该次运行的 frontend 作业依次通过 `npm ci`、lint、TypeScript 类型检查、11 项测试和生产构建；backend 作业通过 `mvn -B verify`。GitHub 对 `actions/checkout@v4` 和 `actions/setup-java@v4` 给出弃用提醒，但本次作业结论均为成功；后续可按官方支持周期升级 Action 版本。
